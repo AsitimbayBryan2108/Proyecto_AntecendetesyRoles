@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="744.0" style="-fx-background-color: f;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicas.controladores.ClienteController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8ff9cba" height="258.0" layoutX="29.0" layoutY="81.0" stroke="BLACK" strokeType="INSIDE" width="683.0" />
+      <Label fx:id="lblCedula" alignment="CENTER" layoutX="55.0" layoutY="154.0" prefHeight="28.0" prefWidth="93.0" text="Cedula" textAlignment="CENTER">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigo" layoutX="146.0" layoutY="95.0" prefHeight="35.0" prefWidth="131.0" />
+      <Label fx:id="lblNombres" alignment="CENTER" layoutX="292.0" layoutY="98.0" prefHeight="28.0" prefWidth="93.0" text="Nombres" textAlignment="CENTER">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombres" layoutX="372.0" layoutY="95.0" prefHeight="35.0" prefWidth="284.0" />
+      <Label fx:id="lblDireccion" alignment="CENTER" layoutX="55.0" layoutY="214.0" prefHeight="28.0" prefWidth="93.0" text="Direccion" textAlignment="CENTER">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDireccion" layoutX="150.0" layoutY="215.0" prefHeight="35.0" prefWidth="435.0" />
+      <Label fx:id="lblTelefono" alignment="CENTER" layoutX="292.0" layoutY="154.0" prefHeight="28.0" prefWidth="93.0" text="Telefono" textAlignment="CENTER">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTelefono" layoutX="385.0" layoutY="151.0" prefHeight="35.0" prefWidth="202.0" />
+      <Label fx:id="lblCorreo" alignment="CENTER" layoutX="21.0" layoutY="288.0" prefHeight="28.0" prefWidth="144.0" text="Correo Electronico " textAlignment="CENTER">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCorreo" layoutX="154.0" layoutY="284.0" prefHeight="35.0" prefWidth="435.0" />
+      <Button fx:id="btnGrabar" alignment="CENTER" layoutX="55.0" layoutY="590.0" mnemonicParsing="false" onAction="#doGrabarCliente" prefHeight="30.0" prefWidth="79.0" text="Grabar">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnEliminar" alignment="CENTER" layoutX="182.0" layoutY="591.0" mnemonicParsing="false" onAction="#onEliminar" text="Eliminar">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="lblTitulo" layoutX="307.0" layoutY="14.0" text="SOLUTIONS S.A." textFill="#26bf00">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCliente" layoutX="298.0" layoutY="44.0" prefHeight="24.0" prefWidth="174.0" text="Mantenedor Cliente" textFill="#0909ff">
+         <font>
+            <Font name="Cambria Italic" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSalir" layoutX="574.0" layoutY="590.0" mnemonicParsing="false" onAction="#CerrarVentana" text="Salir">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblCodigo" alignment="CENTER" layoutX="55.0" layoutY="98.0" prefHeight="28.0" prefWidth="79.0" text="Codigo" textAlignment="CENTER">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCedula" layoutX="148.0" layoutY="151.0" prefHeight="35.0" prefWidth="131.0" />
+      <ListView fx:id="listCliente" layoutX="34.0" layoutY="358.0" onMouseClicked="#doSeleccionarCliente" prefHeight="208.0" prefWidth="683.0" />
+   </children>
+</AnchorPane>

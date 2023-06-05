@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practicas.controladores.CotizacionController">
+   <children>
+      <Label fx:id="lblTitulo" layoutX="320.0" layoutY="14.0" text="SOLUTIONS S.A." textFill="#26bf00">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTecnicos" layoutX="344.0" layoutY="44.0" text="Cotizacion " textFill="#0909ff">
+         <font>
+            <Font name="Cambria Italic" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnFacturar" layoutX="61.0" layoutY="588.0" mnemonicParsing="false" onAction="#doGrabar" text="Facturar" textOverrun="CENTER_WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnRechazar" layoutX="160.0" layoutY="588.0" mnemonicParsing="false" onAction="#doRechaazar" text="Rechazar" textOverrun="CENTER_WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnSalir" layoutX="672.0" layoutY="591.0" mnemonicParsing="false" onAction="#CerrarVentana" text="Salir">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00ff934a" height="491.0" layoutX="48.0" layoutY="74.0" stroke="BLACK" strokeType="INSIDE" width="696.0">
+         <effect>
+            <Glow />
+         </effect>
+      </Rectangle>
+      <Label fx:id="lblCodigo" layoutX="89.0" layoutY="107.0" text="Orden">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Label fx:id="lblDescripcionep" layoutX="72.0" layoutY="152.0" text="Descripcion">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <TextArea fx:id="txtDescripcionep" layoutX="150.0" layoutY="159.0" opacity="0.7" prefHeight="100.0" prefWidth="541.0" style="-fx-border-color: Black;" />
+      <TextField fx:id="txtDescripcion" layoutX="217.0" layoutY="298.0" opacity="0.7" prefHeight="27.0" prefWidth="362.0" style="-fx-border-color: Black;" />
+      <Label fx:id="lblDescripcion" alignment="CENTER" layoutX="217.0" layoutY="270.0" prefHeight="20.0" prefWidth="336.0" text="Descripcion">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Label fx:id="lblPrecio" alignment="CENTER" layoutX="597.0" layoutY="270.0" prefHeight="20.0" prefWidth="93.0" text="Precio">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <TextField fx:id="txtPrecio" layoutX="597.0" layoutY="298.0" opacity="0.7" prefHeight="25.0" prefWidth="93.0" style="-fx-border-color: Black;" />
+      <TextField fx:id="txtCantidad" layoutX="116.0" layoutY="298.0" opacity="0.7" prefHeight="25.0" prefWidth="83.0" style="-fx-border-color: Black;" />
+      <Label fx:id="lblCantidad" alignment="CENTER" layoutX="119.0" layoutY="270.0" prefHeight="20.0" prefWidth="79.0" text="Cantidad">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Button fx:id="btnAgregar" layoutX="705.0" layoutY="295.0" mnemonicParsing="false" onAction="#doInsDetalle" style="-fx-background-color: White; -fx-border-color: Green;" text="+">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <ListView fx:id="lstCotizacion" layoutX="116.0" layoutY="344.0" opacity="0.7" prefHeight="158.0" prefWidth="575.0" style="-fx-border-color: Black;" />
+      <Button fx:id="btnRemover" layoutX="76.0" layoutY="295.0" mnemonicParsing="false" style="-fx-background-color: White; -fx-border-color: Red;" text="-">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblTotal" layoutX="507.0" layoutY="522.0" prefHeight="19.0" prefWidth="37.0" text="Total">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <TextField fx:id="txtTotal" layoutX="556.0" layoutY="518.0" opacity="0.7" prefHeight="27.0" prefWidth="152.0" style="-fx-border-color: Black;" />
+      <TextField fx:id="txtOrden" layoutX="150.0" layoutY="104.0" opacity="0.7" prefHeight="25.0" prefWidth="67.0" style="-fx-border-color: Black;" />
+      <TextField fx:id="txtCliente" layoutX="223.0" layoutY="104.0" opacity="0.7" prefHeight="27.0" prefWidth="470.0" style="-fx-border-color: Black;" />
+      <Label fx:id="lblTecnicoEncargado" layoutX="69.0" layoutY="522.0" text="Tecnico a Cargo ">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <TextField fx:id="txtTecnicoEncargado" layoutX="179.0" layoutY="518.0" opacity="0.7" prefHeight="27.0" prefWidth="250.0" style="-fx-border-color: Black;" />
+   </children>
+</AnchorPane>
